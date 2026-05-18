@@ -4,25 +4,17 @@ jQuery(" #js-drawer-icon").on("click" , function(e){
     jQuery(" #js-drawer-content").toggleClass("is-checked");
 });
 
-// const drawerIcon = document.querySelector("#js-drawer-icon") ;
-// const drawerContent = document.querySelector("#js-drawer-content") ;
 
-// drawerIcon.addEventListener("click",function(e){
-//     e.preventDefault();
-//     drawerIcon.classList.toggle("is-checked")
-//     drawerContent.classList.toggle("is-checked")
-// });
-
-// jQuery(".js-accordion").on("click" , function(e){
-//     e.preventDefault();
-//     if(jQuery(this).parent().hasClass("is-open")){
-//         jQuery(this).parent().removeClass("is-open")
-//         jQuery(this).next().slideUp();
-//     }else{
-//         jQuery(this).parent().addClass("is-open")
-//         jQuery(this).next().slideDown();
-//     }
-// });
+jQuery(".js-accordion").on("click" , function(e){
+    e.preventDefault();
+    if(jQuery(this).parent().hasClass("is-open")){
+        jQuery(this).parent().removeClass("is-open")
+        jQuery(this).next().slideUp();
+    }else{
+        jQuery(this).parent().addClass("is-open")
+        jQuery(this).next().slideDown();
+    }
+});
 
 const swiper = new Swiper('#js-gallery-swiper', {
 
@@ -50,30 +42,6 @@ const swiper = new Swiper('#js-gallery-swiper', {
     e.preventDefault();
     jQuery('#js-about-modal')[0].close();
   });
-  
-
-  // const modalOpenItems = doqument.querySelectorAll('.js-modal-open');
-  // const modalCloseItems = doqument.querySelectorAll('.js-modal-close');
-  // const aboutModal = document.querySelector('#js-about-modal');
-
-  // modalOpenItems.forEach(function(modalOpenItem){
-  //   modalOpenItem.addEventListener('click'function(e){
-  //     e.preventDefault();
-
-  //     if(aboutModal){
-  //       aboutModal.showModal();
-  //     }
-  //   });
-  // });
-  // modalCloseItems.forEach(function(modalCloseItem){
-  //   modalOpenItem.addEventListener('click'function(e){
-  //     e.preventDefault();
-      
-  //     if(aboutModal){
-  //       aboutModal.close();
-  //     }
-  //   });
-  // });
 
   jQuery('#js-drawer-content a[href^="#"]').on("click" , function(){
     jQuery(" #js-drawer-icon").removeClass("is-checked");
